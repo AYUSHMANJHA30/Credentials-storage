@@ -4,12 +4,12 @@ from tkinter import messagebox
 import tkinter.messagebox
 
 
-# ****** GLOBAL VARIABLES ******
+# ----- GLOBAL VARIABLES -----
 
 objects = []
 window = Tk()
 window.withdraw()
-window.title('Email Storage')
+window.title('Credentials storage')
 
 class popupWindow(object):
 
@@ -152,7 +152,7 @@ class entity_display:
         self.deleteButton.destroy()
 
 
-# ******* FUNCTIONS *********
+# ----- FUNCTIONS --------
 
 
 def onsubmit():
@@ -186,18 +186,18 @@ def readfile():
     f.close()
 
 
-# ******* GRAPHICS *********
+# ------ GRAPHICS ------
 
 m = popupWindow(window)
 
 entity_label = Label(window, text='Add Entity', font=('Courier', 18))
-name_label = Label(window, text='Name: ', font=('Courier', 14))
-email_label = Label(window, text='Email: ', font=('Courier', 14))
+name_label = Label(window, text='Website: ', font=('Courier', 14))
+email_label = Label(window, text='Username: ', font=('Courier', 14))
 pass_label = Label(window, text='Password: ', font=('Courier', 14))
 name = Entry(window, font=('Courier', 14))
 email = Entry(window, font=('Courier', 14))
 password = Entry(window, show='*', font=('Courier', 14))
-submit = Button(window, text='Add Email', command=onsubmit, font=('Courier', 14))
+submit = Button(window, text='Add account', command=onsubmit, font=('Courier', 14))
 
 entity_label.grid(columnspan=3, row=0)
 name_label.grid(row=1, sticky=E, padx=3)
@@ -210,8 +210,8 @@ password.grid(columnspan=3, row=3, column=1, padx=2, pady=2, sticky=W)
 
 submit.grid(columnspan=3, pady=4)
 
-name_label2 = Label(window, text='Name: ', font=('Courier', 14))
-email_label2 = Label(window, text='Email: ', font=('Courier', 14))
+name_label2 = Label(window, text='Website: ', font=('Courier', 14))
+email_label2 = Label(window, text='Username: ', font=('Courier', 14))
 pass_label2 = Label(window, text='Password: ', font=('Courier', 14))
 
 name_label2.grid(row=5)
